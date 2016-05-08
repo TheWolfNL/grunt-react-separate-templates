@@ -1,0 +1,31 @@
+<!-- Regular comment -->
+<ul jsx-class="List">
+    <!-- @render list -->
+    <!-- inline comment -->
+    <Item jsx-tpl="item" class="item {style}" jsx-spread="attr" title="Item">{m}</Item>
+</ul>
+
+<li jsx-class="Item">
+    <input type="text"/>
+</li>
+
+<ul jsx-class="UsersList" class="users">
+    <!--@render users-->
+    <li jsx-tpl="user">
+        <h2>{user.name}</h2>
+
+        <ul jsx-class="FriendsList" jsx-instance="true" friends="{user.friends}" class="friends" data-id="1">
+            <!--@render friends-->
+            <li jsx-tpl="friend">
+                <h3>{friend.name}</h3>
+            </li>
+        </ul>
+
+        <div jsx-class="SubList">
+            <!--@render item-->
+            <li jsx-class="SubItem" jsx-instance="true" jsx-tpl="sub-item">
+                <span>{sub.name}</span>
+            </li>
+        </div>
+    </li>
+</ul>
