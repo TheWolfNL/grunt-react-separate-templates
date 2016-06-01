@@ -22,7 +22,7 @@ var grunt = require('grunt');
     test.ifError(value)
 */
 
-exports.react_separate_templates = {
+exports.react-separate-templates = {
   setUp: function(done) {
     // setup here if necessary
     done();

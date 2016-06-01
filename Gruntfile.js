@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    react_separate_templates: {
+    'react-separate-templates': {
       default_options: {
         options: {
           html: 'test/fixtures/templates/',
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
 
     // Unit tests.
     nodeunit: {
-      tests: ['test/*_test.js']
+      tests: ['test/*-test.js']
     }
 
   });
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'react_separate_templates', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'react-separate-templates', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
